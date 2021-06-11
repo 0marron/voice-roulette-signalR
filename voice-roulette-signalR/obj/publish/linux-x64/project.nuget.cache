@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UmvmZOLAofWWfsq70L/qIf3a124SnkLjCK1Z+GCPoS7I6u8Gg1yb9tqzAQCw/8eEarac/LLmzmpYckQkFVWOtw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AN20\\Desktop\\Projects\\voice-roulette-signalR\\voice-roulette-signalR\\voice-roulette-signalR.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AN20\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\3.1.9\\microsoft.netcore.app.host.linux-x64.3.1.9.nupkg.sha512"
+  ],
+  "logs": []
+}

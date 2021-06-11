@@ -1,0 +1,452 @@
+﻿
+@{Layout = null; }
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width">
+    <title>Голосовой чат. Чат рулетка для знакомств</title>
+    <meta name="description" content="Вирт чат - текстовый онлайн чат. Чат для вирта и общения. Секс чат. Чат для секс знакомств. Голосовая чат рулетка " />
+    <meta name="keywords" content="вирт, чат, онлайн, анон, без регистрации, анонимный, virtchat, chat-in-love, love-in-chat" />
+    <meta name="yandex-verification" content="0b024a7016352252" />
+    <meta name="google-site-verification" content="tF2UAuFgC6GOl-MooE5FvTQzj8-exJ87ir6e8aGPVos" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link href="/lib/icomoon/style.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/lib/alertifyjs/build/css/alertify.min.css" rel="stylesheet" />
+    <link href="/lib/alertifyjs/build/css/themes/default.min.css" rel="stylesheet" />
+    <link href="/Content/css/Custom.css" rel="stylesheet" />
+    <style>
+        header {
+            margin: auto;
+            height: 70px;
+            width: 100%;
+            padding: 30px 0px;
+            background-color: #FFF;
+            border-bottom: 2px solid silver;
+            margin: auto;
+        }
+
+            header #frm {
+                float: right;
+                margin-right: 30px;
+                width: 30%;
+                min-width: 300px;
+            }
+
+
+
+            header #Buy span {
+                color: #e82a2a;
+                font-size: 1em;
+            }
+
+            header #Buy a {
+                color: #000000;
+                font-family: "Segoe UI", Arial, sans-serif;
+                font-size: 1em;
+            }
+
+            header #Buy {
+                width: 15%;
+                float: right;
+                padding: 40px 20px;
+            }
+
+            header #Home {
+                width: 100%;
+                margin: auto;
+                text-align: center;
+            }
+
+                header #Home a {
+                    color: #000000;
+                    font-family: "Segoe UI", Arial, sans-serif;
+                    font-size: 1em;
+                }
+
+
+
+
+        /*################################Подвал сайта#########################################*/
+        #header:after,
+        #start-area {
+            background-color: rgba(255, 255, 255, .8);
+            width: 100%
+        }
+
+
+
+
+
+
+        #header_links {
+            z-index: 5;
+            float: right;
+            line-height: 40px;
+            padding: 15px 0;
+            overflow: hidden
+        }
+
+            #header_links a {
+                display: block;
+                float: left;
+                margin-left: 40px;
+                color: inherit
+            }
+
+
+        body, html {
+            width: 50%;
+            min-width: 200px;
+            height: calc( 100% - 70px);
+            margin: auto;
+        }
+
+        /*-----------------------Gifs18--------------------*/
+
+
+        .toggleSex {
+            position: relative;
+            display: block;
+            width: 40px;
+            height: 20px;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            transform: translate3d(0, 0, 0);
+        }
+
+            .toggleSex:before {
+                content: "";
+                position: relative;
+                top: 3px;
+                left: 3px;
+                width: 34px;
+                height: 14px;
+                display: block;
+                background: #9A9999;
+                border-radius: 8px;
+                transition: background 0.2s ease;
+            }
+
+            .toggleSex span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                display: block;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 3px 8px rgba(154, 153, 153, 0.5);
+                transition: all 0.2s ease;
+            }
+
+                .toggleSex span:before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    margin: -18px;
+                    width: 56px;
+                    height: 56px;
+                    background: rgba(79, 46, 220, 0.5);
+                    border-radius: 50%;
+                    transform: scale(0);
+                    opacity: 1;
+                    pointer-events: none;
+                }
+
+        #cbxSome1:checked + .toggleSex:before {
+            background: #947ADA;
+        }
+
+        #cbxSome1:checked + .toggleSex span {
+            background: #4F2EDC;
+            transform: translateX(20px);
+            transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
+            box-shadow: 0 3px 8px rgba(79, 46, 220, 0.2);
+        }
+
+            #cbxSome1:checked + .toggleSex span:before {
+                transform: scale(1);
+                opacity: 0;
+                transition: all 0.4s ease;
+            }
+
+
+
+
+        #cbxSome2:checked + .toggleSex:before {
+            background: #947ADA;
+        }
+
+        #cbxSome2:checked + .toggleSex span {
+            background: #4F2EDC;
+            transform: translateX(20px);
+            transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
+            box-shadow: 0 3px 8px rgba(79, 46, 220, 0.2);
+        }
+
+            #cbxSome2:checked + .toggleSex span:before {
+                transform: scale(1);
+                opacity: 0;
+                transition: all 0.4s ease;
+            }
+
+
+
+
+        #cbxMale1:checked + .toggleSex:before {
+            background: #947ADA;
+        }
+
+        #cbxMale1:checked + .toggleSex span {
+            background: #4F2EDC;
+            transform: translateX(20px);
+            transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
+            box-shadow: 0 3px 8px rgba(79, 46, 220, 0.2);
+        }
+
+            #cbxMale1:checked + .toggleSex span:before {
+                transform: scale(1);
+                opacity: 0;
+                transition: all 0.4s ease;
+            }
+
+
+
+
+        #cbxMale2:checked + .toggleSex:before {
+            background: #947ADA;
+        }
+
+        #cbxMale2:checked + .toggleSex span {
+            background: #4F2EDC;
+            transform: translateX(20px);
+            transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
+            box-shadow: 0 3px 8px rgba(79, 46, 220, 0.2);
+        }
+
+            #cbxMale2:checked + .toggleSex span:before {
+                transform: scale(1);
+                opacity: 0;
+                transition: all 0.4s ease;
+            }
+
+
+
+
+        #cbxFemale1:checked + .toggleSex:before {
+            background: #947ADA;
+        }
+
+        #cbxFemale1:checked + .toggleSex span {
+            background: #4F2EDC;
+            transform: translateX(20px);
+            transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
+            box-shadow: 0 3px 8px rgba(79, 46, 220, 0.2);
+        }
+
+            #cbxFemale1:checked + .toggleSex span:before {
+                transform: scale(1);
+                opacity: 0;
+                transition: all 0.4s ease;
+            }
+
+
+
+
+        #cbxFemale2:checked + .toggleSex:before {
+            background: #947ADA;
+        }
+
+        #cbxFemale2:checked + .toggleSex span {
+            background: #4F2EDC;
+            transform: translateX(20px);
+            transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
+            box-shadow: 0 3px 8px rgba(79, 46, 220, 0.2);
+        }
+
+            #cbxFemale2:checked + .toggleSex span:before {
+                transform: scale(1);
+                opacity: 0;
+                transition: all 0.4s ease;
+            }
+
+
+        /*-----------------------------Gifs18---------------------------*/
+        .main {
+            width: 200px;
+            height: 100%;
+            margin: auto;
+            padding-top: 100px;
+            position: relative;
+        }
+
+        .sex-some, .sex-male, .sex-female {
+            width: 200px;
+            height: 50px;
+        }
+
+        .callButton {
+            width: 200px;
+            height: 100px;
+            background-color: #ccddc7;
+        }
+
+        .callbegine, .callend {
+            display: none;
+        }
+    </style>
+</head>
+<body data-mode="idle">
+    <script>
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(function (stream) {
+                console.log('You let me use your mic!')
+            })
+            .catch(function (err) {
+                console.log('No mic for you!')
+            });
+    </script>
+
+    <header>
+
+        <div id="Home"><a href="/">Вернуться на главную страницу</a></div>
+
+    </header>
+
+
+
+    <div class="main">
+        <h5 style="width:100%;  margin:auto; padding-top:20px; text-align:center;">Голосовой чат. Чат рулетка. Общайтесь анонимно и безопасно</h5>
+
+        <div style="width:100%;  margin:auto; padding-top:20px; text-align:center;">
+            <p>
+                Добро пожаловать в голосовую чат рулетку. Выберите свой пол и пол собеседника и нажмите кнопку поиска. Общение полностью анонимно и безопасно. Приятного общения!
+            </p>
+        </div>
+        <div class="sex-male">
+            <div style="margin:auto; width:60px; height:50px; color:black; float:left;">
+                <input type="checkbox" onchange="checkboxEvent(this)" id="cbxMale1" style="display:none" />
+                <label for="cbxMale1" class="toggleSex"><span></span> </label>Я
+                <img src="/lib/img/Sex-Male.png" style="height:20px;width:20px;" />
+            </div>
+
+            <div style="margin:auto; width:60px; height:50px;color:black; float: right;">
+                <input type="checkbox" onchange="checkboxEvent(this)" id="cbxMale2" style="display:none;" />
+                <label for="cbxMale2" class="toggleSex"><span></span> </label>Он
+                <img src="/lib/img/Sex-Male.png" style="height:20px;width:20px;" />
+            </div>
+        </div>
+
+
+        <div class="sex-female">
+            <div style="margin:auto; width:60px; height:50px; color:black; float:left;">
+                <input type="checkbox" onchange="checkboxEvent(this)" id="cbxFemale1" style="display:none" />
+                <label for="cbxFemale1" class="toggleSex"><span></span> </label>Я
+                <img src="/lib/img/Sex-Female.png" style="height:20px;width:20px;" />
+            </div>
+
+            <div style="        margin: auto;
+        width: 60px;
+        height: 50px;
+        color: black;
+        float: right;">
+                <input type="checkbox" onchange="checkboxEvent(this)" id="cbxFemale2" style="display:none;" />
+                <label for="cbxFemale2" class="toggleSex"><span></span> </label>Она
+                <img src="/lib/img/Sex-Female.png" style="height:20px;width:20px;" />
+            </div>
+        </div>
+        <audio class="audio partner" autoplay="" controls="" style="width:200px;"></audio>
+
+
+
+        <button class="callButton">
+            <span>Начать поиск</span>
+        </button>
+
+    </div>
+
+    <script>
+        function checkboxEvent(obj) {
+            if (obj.id == "cbxMale1") {
+                GlobalMySex = "M";
+                document.getElementById("cbxMale1").checked = true;
+                document.getElementById("cbxFemale1").checked = false;
+                document.getElementById("cbxSome1").checked = false;
+            }
+
+            if (obj.id == "cbxFemale1") {
+                GlobalMySex = "W";
+                document.getElementById("cbxMale1").checked = false;
+                document.getElementById("cbxFemale1").checked = true;
+                document.getElementById("cbxSome1").checked = false;
+            }
+
+
+
+
+
+
+            if (obj.id == "cbxMale2") {
+                GlobalYourSex = "M";
+                document.getElementById("cbxMale2").checked = true;
+                document.getElementById("cbxFemale2").checked = false;
+                document.getElementById("cbxSome2").checked = false;
+            }
+
+            if (obj.id == "cbxFemale2") {
+                GlobalYourSex = "W";
+                document.getElementById("cbxMale2").checked = false;
+                document.getElementById("cbxFemale2").checked = true;
+                document.getElementById("cbxSome2").checked = false;
+            }
+
+
+        }
+    </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(55493341, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/55493341" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148795117-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-148795117-1');
+    </script>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/lib/signalr/dist/browser/signalr.min.js"></script>
+    <script src="/lib/alertifyjs/build/alertify.min.js"></script>
+    <script src="/Content/js/utilsRTC.js"></script>
+    <script src="/Content/js/constWebRTC.js"></script>
+    <script src="/lib/adapter/adapter.min.js"></script>
+    <script src="/Content/js/connectionHub.js"></script>
+    <script src="/Content/js/Custom.js"></script>
+</body>
+</html>

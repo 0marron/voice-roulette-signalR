@@ -1,0 +1,3 @@
+﻿User-agent: *
+Host: chatmenow.ru
+Sitemap: https://chatmenow.ru/sitemap.xml
